@@ -5,7 +5,8 @@
     --branco: whitesmoke;
     --preto-transparente: rgba(10,10,10,0.5);
     --branco-transparente: rgba(240, 240, 240, 0.3);
-    --pelicula: linear-gradient(rgba(0,0,0,0.9), 35%,var(--preto-transparente), 90% ,var(--branco-transparente) 100%);
+    --branco-intenso-transparente: rgba(250, 250, 250, 0.5);
+    --pelicula: linear-gradient(rgba(0,0,0,0.9), 35%,var(--preto-transparente), 80% ,var(--branco-transparente) 95%, var(--branco-intenso-transparente) 100%);
 }
 
 
@@ -20,8 +21,8 @@
 
 body {
     background: var(--preto);
-    font-family: 'Times New Roman', Times, serif;
-    color: var(--branco)
+    font-family: 'Montserrat', 'Times New Roman', Times, serif;
+    color: var(--branco);
 }
 
 .container {
@@ -43,37 +44,73 @@ header .logo {
     color: var(--vermelho);
     font-family: 'Arial Black';
     font-size: 3rem;
+    transition-duration: 1s;
+}
+
+header .logo:hover {
+    font-size: 3.1rem
+}
+
+header nav {
+    margin-right: 5vw;
 }
 
 header nav a { 
     text-decoration: none;
     color: var(--cinza);
-    margin-right: 10px;
+    margin-right: 1vw;
+    transition-duration: 0.5s;
 }
 
 header nav a:hover {
-    color: var(--branco)
+    color: var(--branco);
+    text-shadow: 5px 5px 20px var(--branco-transparente);
 }
 
+
+
 /* filme-principal */
+
+main {
+    overflow: auto;
+}
 
 .filme-principal {
     font-size: 1.1rem;
     background: var(--pelicula), url('/img/capa-house.jpg');
     
-    height: 60vh;
+    height: 80vh;
+    min-height: 600px;
     background-size: cover;
     
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
+    
 }
 
-
-.filme-principal h3 {
-    text-transform: uppercase;
+.filme-principal .container {
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
     
+}
+
+.filme-principal .card-texto {
+    margin-top: 10vh;
+    width: 70vw;
+    margin-bottom: 10vh;
+
+}
+
+.filme-principal .titulo {
+    font-size: 2.7rem;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.filme-principal .descricao {
+    font-weight: 100;
+    font-size: 1em;
 }
 
 .filme-principal button {
@@ -85,11 +122,13 @@ header nav a:hover {
     background-color: var(--preto-transparente);
     transition-duration: 1s;
     padding: 15px 30px;
-    font-weight: bolder;
+    font-weight: 400;
     font-size: 0.7rem;
-    margin-bottom: 20vh;
     
+    
+ 
 }
+
 
 .filme-principal button:hover {
     color: var(--preto);
@@ -102,13 +141,15 @@ header nav a:hover {
     margin-right: 0.4rem;
 }
 
-.filme-principal .card-texto {
-    margin-top: 10vh;
-    width: 70vw;
-    margin-bottom: 8vh;
-
+.carrosel-filmes {
+    margin-top: 0.5vh;
 }
 
-.filme-principal .titulo {
-    font-size: 2.7rem;
+
+.owl-carousel .item {
+    transition: 1s;
+}
+
+.owl-carousel .item:hover {
+    transform: scale(1.1);
 }
