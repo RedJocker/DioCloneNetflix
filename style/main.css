@@ -1,6 +1,6 @@
 :root{
     --vermelho: #E50914;
-    --preto: #141414;
+    --preto: #000;
     --cinza: #AAA;
     --branco: whitesmoke;
     --preto-transparente: rgba(10,10,10,0.5);
@@ -14,6 +14,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: 3s
    
 }
 
@@ -44,7 +45,8 @@ header .logo {
     color: var(--vermelho);
     font-family: 'Arial Black';
     font-size: 3rem;
-    transition-duration: 1s;
+    transition-duration: 2s;
+    transition-timing-function: ease-in-out;
 }
 
 header .logo:hover {
@@ -59,7 +61,7 @@ header nav a {
     text-decoration: none;
     color: var(--cinza);
     margin-right: 1vw;
-    transition-duration: 0.5s;
+    transition-duration: 1s;
 }
 
 header nav a:hover {
@@ -120,21 +122,17 @@ main {
     border: outset;
     border-color: rgba(0,0,0,0.1);
     background-color: var(--preto-transparente);
-    transition-duration: 1s;
+    transition-duration: 2s;
     padding: 15px 30px;
     font-weight: 400;
     font-size: 0.7rem;
-    
-    
- 
-}
 
+}
 
 .filme-principal button:hover {
     color: var(--preto);
     background-color: var(--branco-transparente);
     cursor: pointer;
-    
 }
 
 .filme-principal button i {
@@ -147,9 +145,9 @@ main {
 
 
 .owl-carousel .item {
-    transition: 1s;
+    transition: 10s;
 }
 
 .owl-carousel .item:hover {
-    transform: scale(1.1);
+    transform: scale(2);
 }

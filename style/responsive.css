@@ -42,22 +42,6 @@
     }
 }
 
-@media screen and (max-height: 300px) {
-    .filme-principal {
-        background: var(--pelicula), url('/img/capa-house-min.png');
-    }
-    
-    .filme-principal .titulo{
-        font-size: 1.0rem;
-        font-weight: 100;
-    }
-
-    .filme-principal .descricao{
-        font-size: 0.8rem;
-        font-weight: 100;
-    }
-}
-
 @media screen and (min-width: 1200px) {
     header .logo {
         font-size: 4rem;
@@ -82,6 +66,35 @@
 
     .filme-principal .card-texto .descricao {
         font-size: 1.5rem;
+        font-weight: 100;
+    }
+}
+
+@media screen and (max-height: 300px) {
+    header .logo {
+        font-size: 2rem;
+    }
+
+    header .logo:hover {
+        font-size: 2.2rem
+    }
+
+    header nav a {
+        font-size: 1rem;
+    }
+
+
+    .filme-principal {
+        background: var(--pelicula), url('/img/capa-house-min.png');
+    }
+    
+    .filme-principal .card-texto .titulo{
+        font-size: 1.0rem;
+        font-weight: 100;
+    }
+
+    .filme-principal .card-texto .descricao{
+        font-size: 0.8rem;
         font-weight: 100;
     }
 }
